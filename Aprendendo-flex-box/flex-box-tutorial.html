@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box tutorial</title>
+    <style>
+    body{
+        background-color: black;
+    }
+    .container{
+        padding:100px;
+        height: 600px;    /*comando para decidirmos a altura do objeto*/
+        display:flex;
+        flex-direction:row; /*para falarmos se queremos ele como uma coluna ou uma linha no (row:para linha e column:para coluna.*/
+
+        flex-flow:row wrap;/*caso vc queira colocar o flex-direction junto ao flex-wrap pode utilizar esse comando.*/
+        
+        justify-content:space-between , space-around , space-evenly;
+            /*aqui temos tres comando dentro do justify-content o space-between ele vai dar um espaço entre os elementos sem pensar na borda,
+            já o space-around ele da um espaço entre os elementos e um espaço na borda agora o space-evenly ele da um espaço igual tanto para borda e entres os elementos */
+
+        justify-content:center;
+            /*esse comando serve para ageitarmos o flex box dando a cordenada baseado na linha horizontal (justfity-content:center ou start ou end.)*/
+
+        align-items: center;
+            /*aqui temos um comando para ageitarmos o flex box dando a cordenada baseada na linha vertical utilizando(ilgn-items: center ou end ou start.)*/
+
+            /*dentro do comando align-items tambem temos os space-between,around,evenly*/
+
+        align-items: baseline;
+            /*comando para alinha oq ta dentro da bloco/div baseando em cada base independente do tamanha da fonte de cada bloco*/
+
+        flex-wrap:wrap;
+            /*esse comando caso vc tenha diversos blocos/divs na mesma linha vc pode usar o wrap para quando ocupar tudo e decer para linha a baixo*/
+
+            /*aqui tambem temos o !!!gap!!! para decidirmos o tamanha entre os espaçamentos dos blocos/divs e entre as linha deles caso tenha wrap com blocos na linha de baixo dentro disso pode usar tbm gap: 10px (para decidirmos o espaçamento entre as linhas) 20px para o espaçamento entre os blocos/colunas
+            caso contrario utilizar row gap:10px; , column gap:20px;   */
+    }
+    .bloco-1{
+        padding:20px;
+        margin:20px;
+        background-color:red;
+        height: 50px;
+        font-size:5px;
+    }
+    .bloco-2{
+        padding:20px;
+        margin:20px;
+        background-color:blue;
+        height: 50px;
+        font-size:10px;
+    }
+    .bloco-3{
+        padding:20px;
+        margin:20px;
+        background-color:aqua;
+        height: 50px;
+        font-size:15px;
+    }
+    .bloco-4{
+        padding:20px;
+        margin:20px;
+        background-color:purple;
+        height: 50px;
+        font-size:20px;
+    }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+
+        <div class="bloco-1">Filho 1</div>
+
+        <div class="bloco-2">filho 2</div>
+
+        <div class="bloco-3">filho 3</div>
+
+        <div class="bloco-4">filho 4</div>
+
+    </section><!--container-->
+</body>
+</html>
